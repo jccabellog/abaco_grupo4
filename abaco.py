@@ -77,7 +77,7 @@ def agregar_fichas(u,d,c,um,dm,cm):
         cont_cen = cont_cen+6
 
     for i in range(0,unidad_mil):
-        tablero[str(cont_um)] = " XXXXXXX"
+        tablero[str(cont_um)] = " XXXXXX"
         cont_um = cont_um+6
 
     for i in range(0,decena_mil):
@@ -113,6 +113,6 @@ printTab(tablero)
 def crear_lista(numero_inicial):
     numero_formateado = '{:,}' .format(numero_inicial).replace(',','.')
     return numero_formateado
-    
+
 resultado = crear_lista(numero_inicial)   
 print (resultado)
