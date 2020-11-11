@@ -49,11 +49,12 @@ def printTab(tab):
     print(' +-----+     +-----+    +-----+    +-----+   +-----+   +-----+')
     print(' U.Mi.         D.M.       U.M.       CEN       DEC       UNI')
 
-
 print("########BIENVENIDOS AL ABA-WAKE####### \n")
-numero_separado = []
+numero_separado = [] 
 ingreso = input("Ingrese algún número : ")
 numero_inicial = int(ingreso)
+          
+
 
 
 def agregar_fichas(u,d,c,um,dm,cm):
@@ -107,3 +108,11 @@ unidad = resto_centena%10
 
 agregar_fichas(unidad,decena,centena,unidad_mil,decena_mil,centena_mil)
 printTab(tablero)    
+print("El numero seleccionado es : ")
+print('{:,}' .format(numero_inicial).replace(',','.'))
+
+intentos = []   
+intentos += 1
+intentos.append(numero_inicial)
+print(intentos)
+
