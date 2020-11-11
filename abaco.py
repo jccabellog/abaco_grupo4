@@ -54,6 +54,41 @@ numero_separado = []
 ingreso = input("Ingrese algún número : ")
 numero_inicial = int(ingreso)
 
+
+def agregar_fichas(u,d,c,um,dm,cm):
+    cont_uni=6
+    cont_dec=5
+    cont_cen=4
+    cont_um=3
+    cont_dm=2
+    cont_cm=1
+
+    for i in range(0,unidad):
+        tablero[str(cont_uni)] = "X"
+        cont_uni = cont_uni+6
+
+    for i in range(0,decena):
+        tablero[str(cont_dec)] = "X"
+        cont_dec = cont_dec+6
+
+    for i in range(0,centena):
+        tablero[str(cont_cen)] = "X"
+        cont_cen = cont_cen+6
+
+    for i in range(0,unidad_mil):
+        tablero[str(cont_um)] = "X"
+        cont_um = cont_um+6
+
+    for i in range(0,decena_mil):
+        tablero[str(cont_dm)] = "X"
+        cont_dm = cont_dm+6
+
+    for i in range(0,centena_mil):
+        tablero[str(cont_cm)] = "X"
+        cont_cm = cont_cm+6
+
+
+#Codigo para descomponer el numero ingresado por el usuario
 centena_mil = numero_inicial//100000
 resto = numero_inicial%100000
 decena_mil = resto//10000
@@ -64,43 +99,10 @@ centena = resto_mil//100
 resto_centena = resto_mil%100
 decena = resto_centena//10
 unidad = resto_centena%10
-
-print ("el numero tiene :")
-print("unidad ",unidad)
-print("decena ",decena)
-print("centena ",centena)
-print("unidad de mil :",unidad_mil)
-print("decena de mil : ",decena_mil)
-print("centena de mil : ",centena_mil)
-cont_uni=6
-cont_dec=5
-cont_cen=4
-cont_um=3
-cont_dm=2
-cont_cm=1
-for i in range(0,unidad):
-    tablero[str(cont_uni)] = "X"
-    cont_uni = cont_uni+6
-
-for i in range(0,decena):
-    tablero[str(cont_dec)] = "X"
-    cont_dec = cont_dec+6
-
-for i in range(0,centena):
-    tablero[str(cont_cen)] = "X"
-    cont_cen = cont_cen+6
-
-for i in range(0,unidad_mil):
-    tablero[str(cont_um)] = "X"
-    cont_um = cont_um+6
-
-for i in range(0,decena_mil):
-    tablero[str(cont_dm)] = "X"
-    cont_dm = cont_dm+6
-
-for i in range(0,centena_mil):
-    tablero[str(cont_cm)] = "X"
-    cont_cm = cont_cm+6
+#Fin descomposición
 
 
+
+
+agregar_fichas(unidad,decena,centena,unidad_mil,decena_mil,centena_mil)
 printTab(tablero)    
