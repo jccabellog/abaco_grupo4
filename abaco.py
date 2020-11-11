@@ -50,8 +50,8 @@ def printTab(tab):
     print(' U.Mi.         D.M.       U.M.       CEN       DEC       UNI')
 
 
-print("########BIENVENIDOS AL ABA-WAKE####### \n")
-numero_separado = []
+print("\n ########BIENVENIDOS AL ABA-WAKE####### \n")
+
 ingreso = input("Ingrese algún número : ")
 numero_inicial = int(ingreso)
 
@@ -107,3 +107,12 @@ unidad = resto_centena%10
 
 agregar_fichas(unidad,decena,centena,unidad_mil,decena_mil,centena_mil)
 printTab(tablero)    
+
+
+
+def crear_lista(numero_inicial):
+    numero_formateado = '{:,}' .format(numero_inicial).replace(',','.')
+    return numero_formateado
+    
+resultado = crear_lista(numero_inicial)   
+print (resultado)
