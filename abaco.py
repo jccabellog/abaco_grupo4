@@ -1,12 +1,6 @@
-#Abaco grupo4, Awakelab
-<<<<<<< HEAD
 import os
 import sys
-=======
-<<<<<<< HEAD
-import os
-import sys
-=======
+
 
 tablero = { '49': ' |-----|' , '50': '  |-----|' , '51': ' |-----|' , '52': ' |-----|' , '53': ' |-----|' , '54': ' |-----|' , 
             '43': ' |-----|' , '44': '  |-----|' , '45': ' |-----|' , '46': ' |-----|' , '47': ' |-----|' , '48': ' |-----|' , 
@@ -21,17 +15,12 @@ tablero = { '49': ' |-----|' , '50': '  |-----|' , '51': ' |-----|' , '52': ' |-
 tablero_play = []
 for play in tablero:
     tablero_play.append(play)
->>>>>>> bc410473435db10cdbbb3efc56304cd39d26cf90
->>>>>>> jccg
 
 def clear():
     if os.name == "nt":
         os.system("cls")
     else:
         os.system("clear")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 def printTab(tab):
     """Subrutina principal de tablero de Aba-wake, en este tablero se posicionan 
@@ -149,7 +138,7 @@ def crear_lista(ingreso):
     return lista
 
    
-=======
+
 def print_tab_inicial(tab):
     clear()
     print("\n Abaco : \n")
@@ -165,7 +154,7 @@ def print_tab_inicial(tab):
     print('|' +tab['1']+"1CM" + '|   ' + '|' +tab['2']+"1DM" + '|   ' + '|' + tab['3']+"1UM" + '|   ' + '|' + tab['4']+"1C" +  '|   ' + tab['5']+ '|' "1D" +   '|' +tab['6']+ '    ' + '|' "1U" + '|   ' )
     print(' +----+   +----+   +----+   +----+   +--+     +--+')
     print('  U.Mi. D.M.     U.M.     Centena    Decena   Unidad')
->>>>>>> jccg
+
 
 def printTab(tab):
     print(' +-----+     +-----+    +-----+    +-----+   +-----+   +-----+')
@@ -179,7 +168,7 @@ def printTab(tab):
     print(tab['7']+"   "+tab['8']+"   " + tab['9']+"   "+ tab['10']+"  "+ tab['11']+ "  "+tab['12'])
     print(tab['1']+"   "+tab['2']+"   " +tab['3']+"   " + tab['4']+"  "+ tab['5']+ "  "+tab['6'])
     print(' +-----+     +-----+    +-----+    +-----+   +-----+   +-----+')
-<<<<<<< HEAD
+
     print('  C.M.         D.M.       U.M.       CEN       DEC       UNI')
 
 def abaco(num):
@@ -248,10 +237,8 @@ def abaco(num):
     #Fin descomposición
     agregar_fichas(unidad,decena,centena,unidad_mil,decena_mil,centena_mil)
     #clear()
-    printTab(tablero) 
-    
+    printTab(tablero)  
 
-   
 
 lista = []
 def crear_lista(ingreso):
@@ -259,76 +246,3 @@ def crear_lista(ingreso):
     lista.append(str(numero_formateado))
     return lista
 
-   
-=======
-    print(' U.Mi.         D.M.       U.M.       CEN       DEC       UNI')
-
-print("########BIENVENIDOS AL ABA-WAKE####### \n")
-numero_separado = [] 
-ingreso = input("Ingrese algún número : ")
-numero_inicial = int(ingreso)
-          
-
-
-
-def agregar_fichas(u,d,c,um,dm,cm):
-    cont_uni=6
-    cont_dec=5
-    cont_cen=4
-    cont_um=3
-    cont_dm=2
-    cont_cm=1
-
-    for i in range(0,unidad):
-        tablero[str(cont_uni)] = " XXXXXXX"
-        cont_uni = cont_uni+6
-
-    for i in range(0,decena):
-        tablero[str(cont_dec)] = " XXXXXXX"
-        cont_dec = cont_dec+6
-
-    for i in range(0,centena):
-        tablero[str(cont_cen)] = " XXXXXXX"
-        cont_cen = cont_cen+6
-
-    for i in range(0,unidad_mil):
-        tablero[str(cont_um)] = " XXXXXXX"
-        cont_um = cont_um+6
-
-    for i in range(0,decena_mil):
-        tablero[str(cont_dm)] = " XXXXXXX"
-        cont_dm = cont_dm+6
-
-    for i in range(0,centena_mil):
-        tablero[str(cont_cm)] = " XXXXXXX "
-        cont_cm = cont_cm+6
-
-
-#Codigo para descomponer el numero ingresado por el usuario
-centena_mil = numero_inicial//100000
-resto = numero_inicial%100000
-decena_mil = resto//10000
-resto_dec = resto%10000
-unidad_mil = resto_dec//1000
-resto_mil = resto_dec%1000
-centena = resto_mil//100
-resto_centena = resto_mil%100
-decena = resto_centena//10
-unidad = resto_centena%10
-#Fin descomposición
-
-
-
-
-agregar_fichas(unidad,decena,centena,unidad_mil,decena_mil,centena_mil)
-printTab(tablero)    
-print("El numero seleccionado es : ")
-print('{:,}' .format(numero_inicial).replace(',','.'))
-
-intentos = []   
-intentos += 1
-intentos.append(numero_inicial)
-print(intentos)
-
->>>>>>> bc410473435db10cdbbb3efc56304cd39d26cf90
->>>>>>> jccg

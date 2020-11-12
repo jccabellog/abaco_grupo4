@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import abaco as a
-
-print("\n ######## BIENVENIDOS AL ABA-WAKE ####### \n")
-lista=[]
-i=0
-res=""
-while res !="SALIR":
-=======
-#Archivo principal que echa a andar el Aba-wake.
-
-
-
-
 import abaco as a
 
 print("""
@@ -49,21 +35,15 @@ print("""Puedes conocer el numero contando la cantidad de X que hay en cada tabl
 while res !="SALIR":
     #utilizamos factores condicionales para indicar al usuario 
     # los pasos a seguir en caso de que quisiera seguir aprendiendo.
->>>>>>> jccg
     ingreso = input("Ingrese algún número : ")
     a.abaco(ingreso)
     lista_final = a.crear_lista(ingreso)
     res1=input("Si desea terminar la ejecución, escriba salir, de lo contrario presione cualquier tecla :\n")
-<<<<<<< HEAD
-=======
-   
->>>>>>> jccg
+
     res =res1.upper()
 print ("Los números ingresados por el usuario son : \n")
 for num in lista_final:
     print(num)
-<<<<<<< HEAD
-=======
 
 print("Gracias por jugar y aprender con Aba-Wake.")
 print("Recuerda que puedes colaborar con nosotros en https://github.com/jccabellog/abaco_grupo4.git")
@@ -79,4 +59,3 @@ print("""
    `'-...-'  ''-'   `'-'   '.(_,_).'    `._____.'  '---'  '.(_,_).'   `-...-'  (_I_)  
                                                                                       
 """)
->>>>>>> jccg
